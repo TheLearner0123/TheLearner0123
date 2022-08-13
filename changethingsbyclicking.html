@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Change By Clicking</title>
+    <style>
+        *{
+            margin: 0px;
+            padding:0px;
+            box-sizing: border-box;
+
+        }
+        .change{
+            transition: 1s ease-in-out;
+            width: 500px;
+            height: 500px;
+            background-color: yellow;
+        }
+        .text{
+            font-size: larger;
+            font-style:oblique;
+            display:grid;
+            position: absolute;
+            top: 10px;
+            left: 60%;
+
+        }
+        button{
+            background-color: gray;
+            color: aliceblue;
+            border-radius: 10px;
+            width: auto;
+            height: 50px;
+        }
+        image{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="change" id="change">
+        
+    </div>
+
+    <div class="text">
+        <p>Change the Color of the div</p>
+        <button id="button1" onclick="button11()">Click</button><br>
+        <p>Change the size of the div</p>
+        <button id="button2" onclick="button22()">Click</button><br>
+        <p>Add A image</p>
+        <button id="button3" onclick="button33()" value="SHOW">Click</button><br>
+        <p>Remove a image</p>
+        <button id="button4" onclick="button44()" value="HIDE">Click</button><br>
+    </div>
+    <script>
+        
+        function button11()
+        {
+            document.querySelector(".change").style.backgroundColor="red";
+        }
+
+        function button22()
+        {
+            document.querySelector(".change").style.width="800px";
+        }
+
+        function button33()
+        {
+            var img = document.createElement('img');
+            img.src = 
+            'https://www.hdwallpapers.in/download/green_eyes_black_cat_dark_theme_black_background_4k_hd_dark_theme-HD.jpg';
+            document.getElementById('change').appendChild(img);
+            down.innerHTML = "Image Element Added.";
+        }
+
+        function button44()
+        {    var img = document.createElement('img');
+            img.src = 
+            'https://www.hdwallpapers.in/download/green_eyes_black_cat_dark_theme_black_background_4k_hd_dark_theme-HD.jpg';
+            document.getElementById('change').removeChild(img);
+            down.innerHTML="Image Element Deleted"   
+        }
+    </script>
+
+</body>
+</html>
